@@ -1,0 +1,53 @@
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+    padding: 20px;
+    width: 100px;
+    /* margin: 5px; */
+}
+/* ---------- */
+
+.gridbox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    'one one two'
+    'three four two'
+    'three five five'
+    'six six six';
+    grid-gap: 5px;
+    padding: 5px;
+
+}
+.boxi{
+    background-color: sandybrown;
+    padding: 20px;
+    
+}
+.boxi1{
+    grid-area: one;
+}
+.boxi2{
+    grid-area: two;
+}
+.boxi3{
+    grid-area: three;
+}
+.boxi4{
+    grid-area: four;
+}
+.boxi5{
+    grid-area: five;
+}
+.boxi6{
+    grid-area: six;
+}
