@@ -1,0 +1,61 @@
+   body {
+       counter-reset: heading;
+   }
+
+   h1 {
+       font-size: 50px;
+       font-weight: 900;
+   }
+
+   h3::before {
+       counter-increment: heading;
+       content: counter(heading) ' . ';
+   }
+
+   .ball {
+       height: 40px;
+       width: 40px;
+       border-radius: 50px;
+       background-color: red;
+       animation-name: bouncing;
+       animation-duration: 1s;
+       animation-timing-function: cubic-bezier(0.49, 0, 0.89, .74);
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       margin: 20px;
+       box-shadow: inset 0px 0px 10px black;
+
+
+   }
+
+   button {
+background-color: green;       color: rgb(202, 187, 187);
+       font-weight: 900;
+       border-radius: 20px;
+       padding: 10px;
+       margin: 20px;
+       box-shadow: inset 0px 0px 10px black;
+   }
+
+   button:hover {
+       transform: scale(1.2);
+       background:linear-gradient(to bottom left,red,blue,green,yellow);
+       color: transparent;
+       background-clip: text;
+       background-color: none;
+       text-shadow: 0px 0px 100px orange;
+       filter: hue-rotate(360deg);
+   }
+
+   @keyframes bouncing {
+       from {
+           transform: translateY(0px);
+           filter: hue-rotate(0deg);
+       }
+
+       to {
+           transform: translateY(70px);
+           filter: hue-rotate(360deg);
+       }
+
+   }
